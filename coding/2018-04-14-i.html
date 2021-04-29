@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VSCode 插件和配置文件 | 王小错</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.520226f8.css" as="style"><link rel="preload" href="/assets/js/app.8087b4f2.js" as="script"><link rel="preload" href="/assets/js/2.a8d39f88.js" as="script"><link rel="preload" href="/assets/js/18.a8482d9d.js" as="script"><link rel="prefetch" href="/assets/js/10.a553d768.js"><link rel="prefetch" href="/assets/js/11.e7a1276c.js"><link rel="prefetch" href="/assets/js/12.3d2b6925.js"><link rel="prefetch" href="/assets/js/13.e0f570a3.js"><link rel="prefetch" href="/assets/js/14.ddc2b5e5.js"><link rel="prefetch" href="/assets/js/15.d1d3776b.js"><link rel="prefetch" href="/assets/js/16.3c05256e.js"><link rel="prefetch" href="/assets/js/17.d48a88b7.js"><link rel="prefetch" href="/assets/js/19.f9e027e9.js"><link rel="prefetch" href="/assets/js/20.24fd579d.js"><link rel="prefetch" href="/assets/js/21.a743ce9f.js"><link rel="prefetch" href="/assets/js/22.5e55aada.js"><link rel="prefetch" href="/assets/js/23.298c3365.js"><link rel="prefetch" href="/assets/js/24.ecbd4e3c.js"><link rel="prefetch" href="/assets/js/25.24359d38.js"><link rel="prefetch" href="/assets/js/26.9adccbd9.js"><link rel="prefetch" href="/assets/js/27.45ec0db9.js"><link rel="prefetch" href="/assets/js/3.5fb67bba.js"><link rel="prefetch" href="/assets/js/4.074f9dbe.js"><link rel="prefetch" href="/assets/js/5.c40f75c4.js"><link rel="prefetch" href="/assets/js/6.23118c88.js"><link rel="prefetch" href="/assets/js/7.017a4a18.js"><link rel="prefetch" href="/assets/js/8.1022e391.js"><link rel="prefetch" href="/assets/js/9.032e4e55.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.520226f8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">王小错</span></a> <div class="links"><!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/coding/2021-04-26-ii.html" class="nav-link">
+  编程
+</a></div><div class="nav-item"><a href="/writings/2013-05-25-i.html" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><a href="https://github.com/wangxiaocuo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/coding/2021-04-26-ii.html" class="nav-link">
+  编程
+</a></div><div class="nav-item"><a href="/writings/2013-05-25-i.html" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><a href="https://github.com/wangxiaocuo" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/coding/2021-04-26-ii.html" class="sidebar-link">移动端开发技巧积累</a></li><li><a href="/coding/2021-04-26-i.html" class="sidebar-link">CentOS 7.x 安装 Java 1.8</a></li><li><a href="/coding/2021-04-25-ii.html" class="sidebar-link">CentOS 7.x 安装 Node.js 时报错 g++ fatal error</a></li><li><a href="/coding/2021-04-25-i.html" class="sidebar-link">CentOS 7.x 升级 gcc 版本</a></li><li><a href="/coding/2021-04-16-i.html" class="sidebar-link">Vue CLI 3+ 中 配置全局样式变量</a></li><li><a href="/coding/2021-03-10-i.html" class="sidebar-link">开发 Web 应用的常用插件 - 通用版</a></li><li><a href="/coding/2021-03-09-i.html" class="sidebar-link">微信小程序中基于手机号的授权流程设计</a></li><li><a href="/coding/2021-02-06-i.html" class="sidebar-link">用shell脚本简化web项目发版链路</a></li><li><a href="/coding/2021-02-05-1.html" class="sidebar-link">vue高级用法之渲染函数&amp;JXS</a></li><li><a href="/coding/2020-10-12-i.html" class="sidebar-link">MacOS 安装 nginx-1.18.0</a></li><li><a href="/coding/2020-07-10-i.html" class="sidebar-link">聊聊前端开发中恼人的日期格式</a></li><li><a href="/coding/2020-03-04-i.html" class="sidebar-link">使用 PhotoShop CC 资源生成器“光速”切图</a></li><li><a href="/coding/2020-03-03-i.html" class="sidebar-link">MacBook 前端向配置和工具安装</a></li><li><a href="/coding/2020-03-02-i.html" class="sidebar-link">跨平台开发时换行符带来的问题</a></li><li><a href="/coding/2018-04-15-i.html" class="sidebar-link">VSCode 代码片段配置</a></li><li><a href="/coding/2018-04-14-i.html" aria-current="page" class="active sidebar-link">VSCode 插件和配置文件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/coding/2018-04-14-i.html#常用插件" class="sidebar-link">常用插件</a></li><li class="sidebar-sub-header"><a href="/coding/2018-04-14-i.html#配置文件-settings-json" class="sidebar-link">配置文件 settings.json</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="常用插件"><a href="#常用插件" class="header-anchor">#</a> 常用插件</h2> <table><thead><tr><th style="text-align:left;">插件名称</th> <th style="text-align:left;">功能描述</th></tr></thead> <tbody><tr><td style="text-align:left;">Beautify</td> <td style="text-align:left;">格式化 html、js、json、css、scss 等文件</td></tr> <tr><td style="text-align:left;">Bracket Pair Colorizer</td> <td style="text-align:left;">每一对括号都是一种颜色</td></tr> <tr><td style="text-align:left;">Chinese (Simplified) Language Pack for Visual Studio Code</td> <td style="text-align:left;">中文（简体）语言包扩展</td></tr> <tr><td style="text-align:left;">Code Runner</td> <td style="text-align:left;">直接运行多种语言的代码片段或代码文件</td></tr> <tr><td style="text-align:left;">Code Spell Checker</td> <td style="text-align:left;">单词拼写检查工具</td></tr> <tr><td style="text-align:left;">Color Highlight</td> <td style="text-align:left;">颜色高亮显示</td></tr> <tr><td style="text-align:left;">Color Info</td> <td style="text-align:left;">弹出的提示框中显示各种 css 颜色信息</td></tr> <tr><td style="text-align:left;">cssrem</td> <td style="text-align:left;">css 中像素值转换为 rem 值</td></tr> <tr><td style="text-align:left;">Dart</td> <td style="text-align:left;">Dart 语言的扩展支持（针对 Flutter 开发）</td></tr> <tr><td style="text-align:left;">EditorConfig for VS Code</td> <td style="text-align:left;">快速初始化 <code>.editorconfig</code> 文件</td></tr> <tr><td style="text-align:left;">EJS language support</td> <td style="text-align:left;">EJS 模板语法扩展支持</td></tr> <tr><td style="text-align:left;">Emoji</td> <td style="text-align:left;">一个简单的插件，可以从命令面板中插入表情符号</td></tr> <tr><td style="text-align:left;">ESlint</td> <td style="text-align:left;">代码风格检查工具</td></tr> <tr><td style="text-align:left;">Flutter</td> <td style="text-align:left;">flutter 开发支持</td></tr> <tr><td style="text-align:left;">Git History</td> <td style="text-align:left;">可以便捷地查看当前行的 git 提交信息</td></tr> <tr><td style="text-align:left;">Go</td> <td style="text-align:left;">Go 编程语言的扩展支持</td></tr> <tr><td style="text-align:left;">indent-rainbow</td> <td style="text-align:left;">缩进可视化，使缩进更容易阅读</td></tr> <tr><td style="text-align:left;">Indenticator</td> <td style="text-align:left;">高亮显示当前的缩进深度</td></tr> <tr><td style="text-align:left;">IntelliSense for CSS class names in HTML</td> <td style="text-align:left;">HTML 中 CSS 类名自动提示</td></tr> <tr><td style="text-align:left;">JavaScript (ES6) code snippets</td> <td style="text-align:left;">ES6 代码片段提示</td></tr> <tr><td style="text-align:left;">JSON Tools</td> <td style="text-align:left;">JSON 格式化和压缩</td></tr> <tr><td style="text-align:left;">Less IntelliSense</td> <td style="text-align:left;">JSON 格式化和压缩</td></tr> <tr><td style="text-align:left;">Lodash</td> <td style="text-align:left;">Lodash 代码片段提示</td></tr> <tr><td style="text-align:left;">Markdown Preview Enhanced</td> <td style="text-align:left;">markdown 预览工具</td></tr> <tr><td style="text-align:left;">npm Intellisense</td> <td style="text-align:left;">引入依赖或者本地文件时，自动提示</td></tr> <tr><td style="text-align:left;">Path Intellisense</td> <td style="text-align:left;">输入文件路径时，自动提示</td></tr> <tr><td style="text-align:left;">Prettier - Code formatter</td> <td style="text-align:left;">优秀的代码格式化工具</td></tr> <tr><td style="text-align:left;">stylus</td> <td style="text-align:left;">stylus 语法支持</td></tr> <tr><td style="text-align:left;">SVG</td> <td style="text-align:left;">SVG 工具，支持对 SVG 代码的压缩、美化等，以及 SVG 的预览</td></tr> <tr><td style="text-align:left;">TODO Highlight</td> <td style="text-align:left;">在代码中高亮显示 TODO，FIXME 和其他注释</td></tr> <tr><td style="text-align:left;">Vetur</td> <td style="text-align:left;">目前最优秀的 Vue 支持工具</td></tr> <tr><td style="text-align:left;">vscode-icons</td> <td style="text-align:left;">文件图标</td></tr></tbody></table> <h2 id="配置文件-settings-json"><a href="#配置文件-settings-json" class="header-anchor">#</a> 配置文件 settings.json</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// vscode 版本：1.54.1</span>
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;workbench.colorTheme&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Atom One Dark&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;workbench.iconTheme&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vscode-icons&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 文件图标主题设置</span>
+  <span class="token string">&quot;editor.fontLigatures&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 启用字体连字</span>
+  <span class="token string">&quot;editor.formatOnSave&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 保存时格式化</span>
+  <span class="token string">&quot;editor.minimap.enabled&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 显示缩略图</span>
+  <span class="token string">&quot;editor.renderIndentGuides&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 显示缩进参考线</span>
+  <span class="token string">&quot;editor.fontSize&quot;</span><span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token comment">// 编辑区域字体大小</span>
+  <span class="token string">&quot;terminal.integrated.fontSize&quot;</span><span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token comment">// 终端字体大小</span>
+  <span class="token string">&quot;debug.console.fontSize&quot;</span><span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token comment">// 控制调试控制台中的字体大小</span>
+  <span class="token string">&quot;editor.lineHeight&quot;</span><span class="token operator">:</span> <span class="token number">28</span><span class="token punctuation">,</span> <span class="token comment">// 行高</span>
+  <span class="token string">&quot;editor.tabSize&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token comment">// 一个制表符（缩进）为两个空格</span>
+  <span class="token string">&quot;editor.lineNumbers&quot;</span><span class="token operator">:</span> <span class="token string">&quot;on&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 显示绝对行数</span>
+  <span class="token string">&quot;editor.rulers&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// 在120个字符的位置显示标尺</span>
+    <span class="token number">80</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;editor.wordWrap&quot;</span><span class="token operator">:</span> <span class="token string">&quot;on&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 控制本文在可视区域处换行</span>
+  <span class="token string">&quot;editor.codeActionsOnSave&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 来自所有插件的所有可自动修复的ESLint错误都将在保存时修复</span>
+    <span class="token string">&quot;source.fixAll.eslint&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;extensions.ignoreRecommendations&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 不显示扩展建议通知</span>
+
+  <span class="token comment">/* ==================== 搜索 配置 ==================== */</span>
+  <span class="token string">&quot;search.exclude&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 全局搜索时不包含</span>
+    <span class="token string">&quot;**/.vscode&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;**/node_modules&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;**/dist&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;**/bower_components&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;**/build&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;**/.git&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;**/.gitignore&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;**/.svn&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;**/.DS_Store&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;**/.idea&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;**/yarn.lock&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/* ==================== 文件相关 配置 ==================== */</span>
+  <span class="token string">&quot;files.trimTrailingWhitespace&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 文件保存时删除每一行末尾多余的空格</span>
+  <span class="token string">&quot;files.insertFinalNewline&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 文件保存时在文件末尾插入一个新行</span>
+  <span class="token string">&quot;files.trimFinalNewlines&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 保存时，删除最终新行后的所有空行</span>
+  <span class="token string">&quot;files.associations&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 配置语言的文件关联</span>
+    <span class="token string">&quot;*.vue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;*.wxml&quot;</span><span class="token operator">:</span> <span class="token string">&quot;html&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;*.wxss&quot;</span><span class="token operator">:</span> <span class="token string">&quot;css&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;*.cjson&quot;</span><span class="token operator">:</span> <span class="token string">&quot;jsonc&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;*.wxs&quot;</span><span class="token operator">:</span> <span class="token string">&quot;javascript&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/* ==================== emmet 配置 ==================== */</span>
+  <span class="token string">&quot;emmet.syntaxProfiles&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;vue-html&quot;</span><span class="token operator">:</span> <span class="token string">&quot;html&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;vue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;html&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;emmet.includeLanguages&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;vue-html&quot;</span><span class="token operator">:</span> <span class="token string">&quot;html&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;vue&quot;</span><span class="token operator">:</span> <span class="token string">&quot;html&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;javascript&quot;</span><span class="token operator">:</span> <span class="token string">&quot;javascriptreact&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;wxml&quot;</span><span class="token operator">:</span> <span class="token string">&quot;html&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/* ==================== prettier 配置 ==================== */</span>
+  <span class="token comment">// 字符串使用单引号</span>
+  <span class="token string">&quot;prettier.singleQuote&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token comment">// 句尾不添加分号</span>
+  <span class="token string">&quot;prettier.semi&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token comment">// 缩进字节数</span>
+  <span class="token string">&quot;prettier.tabWidth&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token comment">// 缩进不使用 tab</span>
+  <span class="token string">&quot;prettier.useTabs&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token comment">// 对象中打印空格 默认 true</span>
+  <span class="token comment">// true: { foo: bar }</span>
+  <span class="token comment">// false: {foo: bar}</span>
+  <span class="token string">&quot;prettier.bracketSpacing&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token comment">// 箭头函数参数括号 默认 avoid，可选 avoid| always</span>
+  <span class="token comment">// avoid 能省略括号的时候就省略 例如 x =&gt; x</span>
+  <span class="token comment">// always 总是有括号</span>
+  <span class="token string">&quot;prettier.arrowParens&quot;</span><span class="token operator">:</span> <span class="token string">&quot;avoid&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 换行长度，默认80</span>
+  <span class="token string">&quot;prettier.printWidth&quot;</span><span class="token operator">:</span> <span class="token number">80</span><span class="token punctuation">,</span>
+  <span class="token comment">// 多行 JSX 元素时，将 `&gt;` 放在最后一行的末尾，而不是单独放在下一行</span>
+  <span class="token comment">// &lt;button</span>
+  <span class="token comment">//   className=&quot;prettier-class&quot;</span>
+  <span class="token comment">//   id=&quot;prettier-id&quot;</span>
+  <span class="token comment">//   onClick={this.handleClick}&gt;</span>
+  <span class="token comment">//   Click Here</span>
+  <span class="token comment">// &lt;/button&gt;</span>
+  <span class="token comment">// 设置为 false 时</span>
+  <span class="token comment">// &lt;button</span>
+  <span class="token comment">//   className=&quot;prettier-class&quot;</span>
+  <span class="token comment">//   id=&quot;prettier-id&quot;</span>
+  <span class="token comment">//   onClick={this.handleClick}</span>
+  <span class="token comment">// &gt;</span>
+  <span class="token comment">//   Click Here</span>
+  <span class="token comment">// &lt;/button&gt;</span>
+  <span class="token string">&quot;prettier.jsxBracketSameLine&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token comment">// jsx 中使用单引号代替双引号</span>
+  <span class="token string">&quot;prettier.jsxSingleQuote&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token comment">// 在对象或数组最后一个元素后面不加逗号</span>
+  <span class="token string">&quot;prettier.trailingComma&quot;</span><span class="token operator">:</span> <span class="token string">&quot;none&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 每行结尾换行符号设置为 lf</span>
+  <span class="token string">&quot;prettier.endOfLine&quot;</span><span class="token operator">:</span> <span class="token string">&quot;lf&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/* ==================== cssrem 配置 ==================== */</span>
+  <span class="token string">&quot;cssrem.rootFontSize&quot;</span><span class="token operator">:</span> <span class="token number">75</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/* ==================== 格式化规则 配置 ==================== */</span>
+  <span class="token string">&quot;[html]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;[css]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;[scss]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;[less]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;[javascript]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;[javascriptreact]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;[jsx]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;[typescript]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;[vue]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;[json]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;[markdown]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;[jsonc]&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;editor.defaultFormatter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;esbenp.prettier-vscode&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 文件换行符为 LF</span>
+  <span class="token string">&quot;files.eol&quot;</span><span class="token operator">:</span> <span class="token string">&quot;\n&quot;</span><span class="token punctuation">,</span>
+  <span class="token comment">// 因为安装了 Color Highlight，禁用掉自带的颜色修饰器</span>
+  <span class="token string">&quot;editor.colorDecorators&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;window.zoomLevel&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;javascript.updateImportsOnFileMove.enabled&quot;</span><span class="token operator">:</span> <span class="token string">&quot;always&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;go.useLanguageServer&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;todo-tree.tree.showScanModeButton&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/coding/2018-04-15-i.html" class="prev">
+        VSCode 代码片段配置
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.8087b4f2.js" defer></script><script src="/assets/js/2.a8d39f88.js" defer></script><script src="/assets/js/18.a8482d9d.js" defer></script>
+  </body>
+</html>
