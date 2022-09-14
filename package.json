@@ -1,0 +1,18 @@
+{
+  "name": "wangxiaocuo.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs --port 1024",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs --port 2048"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "1.0.0-alpha.4",
+    "vue": "^3.2.37"
+  }
+}
