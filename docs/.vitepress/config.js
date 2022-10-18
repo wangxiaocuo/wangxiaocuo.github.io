@@ -10,9 +10,19 @@ export default {
     logo: '/logo.png',
     lastUpdatedText: '更新日期',
     footer: {
+      message: `<a href="https://beian.miit.gov.cn/" target="_blank">
+        <img
+          style="
+            display: inline-block;
+            margin-right: 4px;
+            vertical-align: middle;
+          "
+          src="/beian.png">
+        <span style="vertical-align: middle;">苏ICP备18016910号-3</span>
+      </a>`,
       copyright: 'Copyright © 2018-present 王小错'
     },
-    nav: [{ text: '博客', link: '/blog/20220701-language-code' }],
+    nav: [{ text: '博客', link: '/blog/18' }],
     sidebar: {
       '/blog/': [
         {
